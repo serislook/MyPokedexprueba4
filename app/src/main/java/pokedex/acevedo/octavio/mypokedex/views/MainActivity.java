@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         listPokemonAdapter = new ListPokemonAdapter(this);
         recyclerView.setAdapter(listPokemonAdapter);
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     PokemonAnswer pokemonAnswer = response.body();
                     ArrayList<Pokemon> listPokemon = pokemonAnswer.getResults();
 
-                    listPokemonAdapter.adicionarListaPokemon(listPokemon);
+                    listPokemonAdapter.addPokemonList(listPokemon);
 
                 } else {
                     Log.e(TAG, " onResponse: " + response.errorBody());

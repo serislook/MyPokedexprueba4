@@ -54,8 +54,8 @@ public class ListPokemonAdapter extends RecyclerView.Adapter<ListPokemonAdapter.
         return dataset.size();
     }
 
-    public void adicionarListaPokemon(ArrayList<Pokemon> listaPokemon) {
-        dataset.addAll(listaPokemon);
+    public void addPokemonList(ArrayList<Pokemon> listPokemon) {
+        dataset.addAll(listPokemon);
         notifyDataSetChanged();
     }
 
